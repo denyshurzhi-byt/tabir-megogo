@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>«Табір нових можливостей» — прем’єра на MEGOGO 19 жовтня</title>
+  <meta name="description" content="SKELAR × БФ «Діти Героїв». Прем’єра фільму «Табір нових можливостей» на MEGOGO 19 жовтня.">
+  <meta name="theme-color" content="#0F131D">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="«Табір нових можливостей» — прем’єра на MEGOGO 19 жовтня">
+  <meta property="og:description" content="SKELAR × БФ «Діти Героїв». Підтримай збір BACK TO SCHOOL.">
+  <meta property="og:image" content="/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/photo.jpg">
+  <style>
+    :root {
+      --bg: #0F131D;
+      --red: #FD3433;
+      --white: #FFFFFF;
+      --muted: rgba(255, 255, 255, 0.6);
+      /* 1 дизайн-піксель макета 1440×1024, вписаний в екран */
+      --u: min(100vw / 1440, 100vh / 1024);
+    }
+    @supports (height: 100dvh) {
+      :root { --u: min(100vw / 1440, 100dvh / 1024); }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--white);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-weight: 500;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      height: 100vh;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      padding: calc(52 * var(--u)) calc(42 * var(--u)) 0;
+    }
+
+    /* ---------- Hero card ---------- */
+    .hero {
+      position: relative;
+      flex: 1 1 auto;
+      min-height: 0;
+      border-radius: calc(40 * var(--u));
+      overflow: hidden;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: calc(89 * var(--u)) calc(40 * var(--u)) 0;
+      text-align: center;
+    }
+    .hero__bg {
+      position: absolute;
+      inset: calc(-24 * var(--u));
+      z-index: -2;
+      background: url("/assets/photo.jpg") center 40% / cover no-repeat;
+      filter: blur(calc(8 * var(--u)));
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(44% 52% at 59% -8%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        rgba(0, 0, 0, 0.12);
+    }
+
+    .logos {
+      width: calc(470 * var(--u));
+      height: auto;
+      display: block;
+    }
+
+    .title {
+      margin-top: calc(90 * var(--u));
+      font-size: calc(74 * var(--u));
+      line-height: 1.21;
+      letter-spacing: -0.01em;
+      font-weight: 500;
+    }
+
+    .title__line { display: block; white-space: nowrap; }
+
+    .countdown {
+      margin-top: calc(115 * var(--u));
+      display: inline-flex;
+      align-items: center;
+      gap: calc(10 * var(--u));
+      padding: calc(24 * var(--u)) calc(32 * var(--u));
+      border-radius: calc(16 * var(--u));
+      background: rgba(255, 255, 255, 0.2);
+      -webkit-backdrop-filter: blur(calc(12 * var(--u)));
+      backdrop-filter: blur(calc(12 * var(--u)));
+      font-size: calc(32 * var(--u));
+      line-height: 1.21;
+      white-space: nowrap;
+    }
+    .countdown__icon {
+      width: calc(48 * var(--u));
+      height: calc(48 * var(--u));
+      flex: none;
+    }
+    .countdown__label { color: var(--muted); }
+    .countdown__value { font-variant-numeric: tabular-nums; }
+
+    /* ---------- Bottom bar ---------- */
+    .donate {
+      flex: none;
+      height: calc(237 * var(--u));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: calc(35 * var(--u));
+      padding: 0 calc(54 * var(--u));
+    }
+    .donate__text {
+      flex: 1 1 auto;
+      max-width: calc(890 * var(--u));
+      font-size: calc(26 * var(--u));
+      line-height: 1.21;
+      text-align: center;
+      color: var(--muted);
+    }
+    .donate__text strong { color: var(--white); font-weight: 500; }
+
+    .btn {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(24 * var(--u)) calc(32 * var(--u));
+      border-radius: calc(16 * var(--u));
+      background: var(--red);
+      color: var(--white);
+      font-size: calc(32 * var(--u));
+      line-height: 1.21;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background-color .2s, transform .2s;
+    }
+    .btn:hover { background: #e52a29; }
+    .btn:active { transform: scale(.98); }
+    .btn:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+
+    /* ---------- Mobile / portrait ---------- */
+    @media (max-aspect-ratio: 1/1), (max-width: 700px) {
+      :root { --m: min(100vw / 390, 100vh / 760); }
+      @supports (height: 100dvh) {
+        :root { --m: min(100vw / 390, 100dvh / 760); }
+      }
+
+      .page {
+        padding: calc(12 * var(--m)) calc(12 * var(--m)) 0;
+        padding-top: max(calc(12 * var(--m)), env(safe-area-inset-top));
+      }
+      .hero {
+        border-radius: calc(28 * var(--m));
+        padding: 0 calc(20 * var(--m));
+        justify-content: center;
+      }
+      .hero__bg {
+        inset: calc(-16 * var(--m));
+        filter: blur(calc(6 * var(--m)));
+        background-position: 40% center;
+      }
+      .hero::before {
+        background:
+          radial-gradient(90% 40% at 50% -5%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+          rgba(0, 0, 0, 0.18);
+      }
+      .logos { width: calc(300 * var(--m)); }
+      .title {
+        margin-top: calc(48 * var(--m));
+        font-size: calc(34 * var(--m));
+        line-height: 1.18;
+      }
+      .title__line { display: inline; white-space: normal; }
+      .countdown {
+        margin-top: calc(48 * var(--m));
+        flex-direction: column;
+        gap: calc(6 * var(--m));
+        padding: calc(16 * var(--m)) calc(22 * var(--m));
+        border-radius: calc(16 * var(--m));
+        font-size: calc(18 * var(--m));
+        -webkit-backdrop-filter: blur(calc(12 * var(--m)));
+        backdrop-filter: blur(calc(12 * var(--m)));
+      }
+      .countdown__icon {
+        width: calc(36 * var(--m));
+        height: calc(36 * var(--m));
+        margin-bottom: calc(4 * var(--m));
+      }
+      .countdown__value { font-size: calc(24 * var(--m)); }
+
+      .donate {
+        height: auto;
+        flex-direction: column;
+        gap: calc(16 * var(--m));
+        padding: calc(20 * var(--m)) calc(8 * var(--m));
+        padding-bottom: max(calc(16 * var(--m)), env(safe-area-inset-bottom));
+      }
+      .donate__text {
+        max-width: none;
+        font-size: calc(15 * var(--m));
+        line-height: 1.3;
+      }
+      .btn {
+        width: 100%;
+        padding: calc(18 * var(--m));
+        border-radius: calc(16 * var(--m));
+        font-size: calc(20 * var(--m));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <img class="logos" src="/assets/logos.svg" width="470" height="54" alt="SKELAR × Благодійний фонд «Діти Героїв»">
+
+      <h1 class="title"><span class="title__line">«Табір нових можливостей» —</span> <span class="title__line">прем’єра на MEGOGO 19&nbsp;жовтня</span></h1>
+
+      <div class="countdown" role="timer" aria-live="off">
+        <svg class="countdown__icon" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M24 2.5C12.1259 2.5 2.49997 12.1259 2.49997 24C2.49997 35.8742 12.1259 45.5 24 45.5C35.8742 45.5 45.5 35.8742 45.5 24C45.5 12.1259 35.8742 2.5 24 2.5ZM21.3608 16.3734C19.4544 15.3522 17 16.5461 17 18.4946V29.5054C17 31.454 19.4544 32.6478 21.3608 31.6266L31.6384 26.1212C33.4538 25.1486 33.4538 22.8514 31.6384 21.8788L21.3608 16.3734Z"/>
+        </svg>
+        <span class="countdown__label" id="cd-label">Перегляд відкриється через:</span>
+        <span class="countdown__value" id="cd-value">&nbsp;</span>
+      </div>
+    </section>
+
+    <footer class="donate">
+      <p class="donate__text">
+        <strong>А поки можеш задонатити на BACK TO SCHOOL:</strong>
+        БФ «Діти Героїв» збирає на освіту для дітей, які втратили батьків через війну.
+      </p>
+      <a class="btn" id="donate-btn" href="#" target="_blank" rel="noopener">Підтримати збір</a>
+    </footer>
+  </main>
+
+  <script>
+    // ===== Налаштування =====
+    // Відкриття перегляду: 19 жовтня 2026, 00:00 за Києвом (UTC+3, літній час)
+    const PREMIERE = new Date("2026-10-19T00:00:00+03:00").getTime();
+    // Посилання на збір BACK TO SCHOOL
+    const DONATE_URL = "#";
+    // ========================
+
+    document.getElementById("donate-btn").href = DONATE_URL;
+
+    const labelEl = document.getElementById("cd-label");
+    const valueEl = document.getElementById("cd-value");
+
+    function plural(n, one, few, many) {
+      const m10 = n % 10, m100 = n % 100;
+      if (m10 === 1 && m100 !== 11) return one;
+      if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+      return many;
+    }
+    const pad = n => String(n).padStart(2, "0");
+
+    let timer;
+    function tick() {
+      const diff = PREMIERE - Date.now();
+
+      if (diff <= 0) {
+        labelEl.textContent = "Перегляд уже відкрито —";
+        valueEl.textContent = "дивись на MEGOGO";
+        clearInterval(timer);
+        return;
+      }
+
+      const s = Math.floor(diff / 1000);
+      const d = Math.floor(s / 86400);
+      const h = Math.floor((s % 86400) / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const sec = s % 60;
+
+      const parts = [];
+      if (d > 0) parts.push(`${d} ${plural(d, "день", "дні", "днів")}`);
+      parts.push(`${d > 0 ? h : pad(h)} год`, `${pad(m)} хв`, `${pad(sec)} с`);
+      valueEl.textContent = parts.join(" ");
+    }
+
+    tick();
+    timer = setInterval(tick, 1000);
+  </script>
+</body>
+</html>
