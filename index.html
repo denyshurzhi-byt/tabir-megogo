@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="/assets/photo.jpg">
+  <link rel="preload" as="image" href="/assets/photo.webp" type="image/webp">
   <style>
     :root {
       --bg: #0F131D;
@@ -64,10 +64,9 @@
     }
     .hero__bg {
       position: absolute;
-      inset: calc(-24 * var(--u));
+      inset: 0;
       z-index: -2;
-      background: url("/assets/photo.jpg") center 40% / cover no-repeat;
-      filter: blur(calc(8 * var(--u)));
+      background: url("/assets/photo.webp") center 40% / cover no-repeat;
     }
     .hero::before {
       content: "";
@@ -173,8 +172,6 @@
         justify-content: center;
       }
       .hero__bg {
-        inset: calc(-16 * var(--m));
-        filter: blur(calc(6 * var(--m)));
         background-position: 40% center;
       }
       .hero::before {
