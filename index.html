@@ -66,6 +66,9 @@
       position: absolute;
       inset: 0;
       z-index: -2;
+      /* радіус на самих шарах: iOS Safari не обрізає кути через overflow,
+         коли всередині є backdrop-filter */
+      border-radius: inherit;
       background: url("/assets/photo.webp") center 40% / cover no-repeat;
     }
     .hero::before {
@@ -73,6 +76,7 @@
       position: absolute;
       inset: 0;
       z-index: -1;
+      border-radius: inherit;
       background:
         radial-gradient(44% 52% at 59% -8%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
         rgba(0, 0, 0, 0.12);
